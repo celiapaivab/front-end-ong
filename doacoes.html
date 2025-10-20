@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>ONG Criança Feliz — Captação de Recursos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <h1>ONG Criança Feliz</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Institucional</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li><a href="doacoes.html">Captação de recursos</a></li>
+          <li><a href="transparencia.html">Comunicação & Transparência</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Campanhas de arrecadação -->
+      <section aria-labelledby="campanhas">
+        <h2 id="campanhas">Campanhas de Arrecadação</h2>
+        <p>
+          Conheça nossas campanhas ativas e como você pode contribuir para cada
+          projeto.
+        </p>
+        <ul>
+          <li>Doação de livros para a Feira do Livro</li>
+          <li>Kits de experimentos para a Feira de Ciências</li>
+          <li>Materiais artísticos para a Gincana do Dia das Crianças</li>
+        </ul>
+      </section>
+
+      <!-- Sistema de doações online -->
+      <section aria-labelledby="doacao-online">
+        <h2 id="doacao-online">Doações Online</h2>
+        <p>Faça sua doação de forma rápida, segura e transparente.</p>
+        <form action="#" method="post">
+          <label for="nome">Nome completo:</label><br />
+          <input type="text" id="nome" name="nome" required /><br /><br />
+
+          <label for="email">E-mail:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="valor">Valor da doação (R$):</label><br />
+          <input
+            type="number"
+            id="valor"
+            name="valor"
+            min="1"
+            required
+          /><br /><br />
+
+          <label for="campanha">Campanha de interesse:</label><br />
+          <select id="campanha" name="campanha">
+            <option value="feira-livro">Feira do Livro</option>
+            <option value="gincana">Gincana do Dia das Crianças</option>
+            <option value="feira-ciencias">Feira de Ciências</option></select
+          ><br /><br />
+
+          <button type="submit">Contribuir</button>
+        </form>
+      </section>
+
+      <!-- Metas e progresso -->
+      <section aria-labelledby="metas">
+        <h2 id="metas">Metas e Progresso</h2>
+        <p>Acompanhe em tempo real o progresso de cada campanha.</p>
+        <ul>
+          <li>Feira do Livro: 200 livros doados</li>
+          <li>Feira de Ciências: 70 kits de experimentos doados</li>
+          <li>Gincana do Dia das Crianças: 50 kits artísticos doados</li>
+        </ul>
+      </section>
+
+      <!-- Relatórios de prestação de contas -->
+      <section aria-labelledby="relatorios">
+        <h2 id="relatorios">Prestação de Contas</h2>
+        <p>
+          Transparência é fundamental. Acesse os relatórios das doações e uso
+          dos recursos.
+        </p>
+        <ul>
+          <li><a href="#">Relatório Anual 2025 (PDF)</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="ano">2025</span> ONG Criança Feliz</p>
+    </footer>
+  </body>
+</html>
