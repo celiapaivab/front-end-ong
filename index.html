@@ -4,118 +4,251 @@
     <meta charset="utf-8" />
     <title>ONG Criança Feliz — Index</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header>
-      <h1>ONG Criança Feliz</h1>
-      <p>
-        Projetos educacionais e culturais para crianças em escolas públicas.
-      </p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Institucional</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="voluntariado.html">Voluntariado</a></li>
-          <li><a href="doacoes.html">Captação de recursos</a></li>
-          <li><a href="transparencia.html">Comunicação & Transparência</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Seção Missão -->
-      <section aria-labelledby="missao">
-        <h2 id="missao">Missão</h2>
-        <p>
-          Promover oportunidades educativas e culturais para crianças em escolas
-          públicas, fomentando criatividade, leitura e ciência por meio de
-          atividades gratuitas.
+    <header class="navbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="navbar-brand">ONG Criança Feliz</a>
+        <p class="text-lg text-neutral-600 hidden-mobile">
+          Projetos educacionais e culturais para crianças em escolas públicas.
         </p>
-      </section>
-
-      <!-- Seção Visão -->
-      <section aria-labelledby="visao">
-        <h2 id="visao">Visão</h2>
-        <p>
-          Ser referência local em projetos escolares participativos, ampliando o
-          acesso à cultura e ao conhecimento.
-        </p>
-      </section>
-
-      <!-- Seção Valores -->
-      <section aria-labelledby="valores">
-        <h2 id="valores">Valores</h2>
-        <ul>
-          <li>Inclusão</li>
-          <li>Transparência</li>
-          <li>Colaboração</li>
-          <li>Impacto social</li>
-        </ul>
-      </section>
-
-      <!-- Seção Sobre -->
-      <section aria-labelledby="sobre">
-        <h2 id="sobre">Sobre a ONG</h2>
-        <p>
-          Atuamos em parceria com escolas públicas, secretarias e voluntários
-          para organizar feiras e atividades culturais. Nosso propósito é garantir que
-          toda criança tenha acesso a experiências de aprendizado que estimulem
-          sua curiosidade, imaginação e autonomia.
-        </p>
-        <article aria-labelledby="historico">
-          <h3 id="historico">Histórico e Conquistas</h3>
-          <p>
-            Fundada em 2025, a ONG Criança Feliz nasceu da iniciativa de um
-            grupo de amantes da educação que acreditam que o conhecimento transforma
-            vidas. Desde então, a organização tem ampliado suas ações junto às
-            escolas públicas, com foco em projetos de leitura, arte e ciências.
-          </p>
-        </article>
-
-        <article aria-labelledby="equipe">
-          <h3 id="equipe">Equipe e Estrutura Organizacional</h3>
-          <p>
-            A equipe é formada por profissionais e voluntários de diversas
-            áreas, unidos pela missão de oferecer educação de qualidade e
-            vivências culturais significativas.
-          </p>
-
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span>
+        </button>
+        <nav class="navbar-menu">
           <ul>
-            <li><strong>Maria Silva</strong> — Diretora Executiva e Financeira</li>
-            <li><strong>Ana Silva</strong> — Coordenadora de Projetos</li>
-            <li>
-              <strong>Equipe técnica:</strong> Professores, psicólogos e monitores voluntários.
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link">Institucional</a>
+            </li>
+            <li class="navbar-item">
+              <a href="projetos.html" class="navbar-link">Projetos</a>
+            </li>
+            <li class="navbar-item">
+              <a href="voluntariado.html" class="navbar-link">Voluntariado</a>
+            </li>
+            <li class="navbar-item">
+              <a href="doacoes.html" class="navbar-link"
+                >Captação de recursos</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="transparencia.html" class="navbar-link"
+                >Comunicação & Transparência</a
+              >
             </li>
           </ul>
-        </article>
-        <p>
-          Para conhecer nossos projetos, visite a página
-          <a href="projetos.html">Projetos</a>.
-        </p>
-        <p>
-          Acreditamos que a confiança é construída com clareza. Por isso, todos
-          os nossos relatórios financeiros e de impacto estão disponíveis
-          publicamente, visite a página
-          <a href="transparencia.html">Comunicação & Transparência</a>.
-        </p>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Seção Missão -->
+        <section
+          aria-labelledby="missao"
+          class="card bg-secondary-100 transform hover:scale-105 transition-transform"
+        >
+          <h2 id="missao" class="text-2xl font-bold text-primary-200 mb-4">
+            Missão
+          </h2>
+          <p class="text-neutral-700">
+            Promover oportunidades educativas e culturais para crianças em
+            escolas públicas, fomentando criatividade, leitura e ciência por
+            meio de atividades gratuitas.
+          </p>
+        </section>
+
+        <!-- Seção Visão -->
+        <section
+          aria-labelledby="visao"
+          class="card bg-secondary-200 transform hover:scale-105 transition-transform"
+        >
+          <h2 id="visao" class="text-2xl font-bold text-primary-300 mb-4">
+            Visão
+          </h2>
+          <p class="text-neutral-700">
+            Ser referência local em projetos escolares participativos, ampliando
+            o acesso à cultura e ao conhecimento.
+          </p>
+        </section>
+
+        <!-- Seção Valores -->
+        <section
+          aria-labelledby="valores"
+          class="card bg-secondary-300 transform hover:scale-105 transition-transform"
+        >
+          <h2 id="valores" class="text-2xl font-bold text-primary-400 mb-4">
+            Valores
+          </h2>
+          <ul class="grid grid-cols-2 gap-3">
+            <li
+              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+            >
+              <span class="text-primary-200 mr-2">•</span>Inclusão
+            </li>
+            <li
+              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+            >
+              <span class="text-primary-300 mr-2">•</span>Transparência
+            </li>
+            <li
+              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+            >
+              <span class="text-primary-400 mr-2">•</span>Colaboração
+            </li>
+            <li
+              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+            >
+              <span class="text-primary-100 mr-2">•</span>Impacto social
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Seção Sobre -->
+      <section aria-labelledby="sobre" class="mt-8">
+        <h2 id="sobre" class="text-3xl font-bold text-primary mb-6">
+          Sobre a ONG
+        </h2>
+        <div class="card">
+          <p class="text-lg text-neutral-700 mb-6">
+            Atuamos em parceria com escolas públicas, secretarias e voluntários
+            para organizar feiras e atividades culturais. Nosso propósito é
+            garantir que toda criança tenha acesso a experiências de aprendizado
+            que estimulem sua curiosidade, imaginação e autonomia.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article
+              aria-labelledby="historico"
+              class="bg-secondary-100 p-4 rounded-lg"
+            >
+              <h3
+                id="historico"
+                class="text-xl font-semibold text-primary mb-3"
+              >
+                Histórico e Conquistas
+              </h3>
+              <p class="text-neutral-700">
+                Fundada em 2025, a ONG Criança Feliz nasceu da iniciativa de um
+                grupo de amantes da educação que acreditam que o conhecimento
+                transforma vidas. Desde então, a organização tem ampliado suas
+                ações junto às escolas públicas, com foco em projetos de
+                leitura, arte e ciências.
+              </p>
+            </article>
+
+            <article
+              aria-labelledby="equipe"
+              class="bg-secondary-100 p-4 rounded-lg"
+            >
+              <h3 id="equipe" class="text-xl font-semibold text-primary mb-3">
+                Equipe e Estrutura Organizacional
+              </h3>
+              <p class="text-neutral-700 mb-4">
+                A equipe é formada por profissionais e voluntários de diversas
+                áreas, unidos pela missão de oferecer educação de qualidade e
+                vivências culturais significativas.
+              </p>
+
+              <ul class="space-y-2">
+                <li class="flex items-center text-neutral-700">
+                  <strong class="text-primary">Maria Silva</strong>
+                  <span class="mx-2">—</span>
+                  Diretora Executiva e Financeira
+                </li>
+                <li class="flex items-center text-neutral-700">
+                  <strong class="text-primary">Ana Silva</strong>
+                  <span class="mx-2">—</span>
+                  Coordenadora de Projetos
+                </li>
+                <li class="flex items-center text-neutral-700">
+                  <strong class="text-primary">Equipe técnica:</strong>
+                  <span class="mx-2">—</span>
+                  Professores, psicólogos e monitores voluntários.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          <p class="text-lg">
+            Para conhecer nossos projetos, visite a página
+            <a
+              href="projetos.html"
+              class="text-primary hover:underline font-medium"
+              >Projetos</a
+            >.
+          </p>
+          <p class="text-lg">
+            Acreditamos que a confiança é construída com clareza. Por isso,
+            todos os nossos relatórios financeiros e de impacto estão
+            disponíveis publicamente, visite a página
+            <a
+              href="transparencia.html"
+              class="text-primary hover:underline font-medium"
+              >Comunicação & Transparência</a
+            >.
+          </p>
+        </div>
       </section>
 
       <!-- Seção Contato -->
-      <section aria-labelledby="contato">
-        <h2 id="contato">Contato</h2>
-        <address>
-          Rua Brasil, 123 — Bairro Cidade Nova — Cidade Feliz <br />
-          E-mail:
-          <a href="mailto:contato@criancafeliz.org"
-            >contato@criancafeliz.org</a
-          ><br />
-          Telefone: (99) 99999-9999
+      <section aria-labelledby="contato" class="mt-8 card bg-secondary-100">
+        <h2 id="contato" class="text-2xl font-bold text-primary mb-4">
+          Contato
+        </h2>
+        <address class="text-neutral-700 not-italic">
+          <p class="mb-2">
+            Rua Brasil, 123 — Bairro Cidade Nova — Cidade Feliz
+          </p>
+          <p class="mb-2">
+            E-mail:
+            <a
+              href="mailto:contato@criancafeliz.org"
+              class="text-primary hover:underline"
+              >contato@criancafeliz.org</a
+            >
+          </p>
+          <p>
+            Telefone:
+            <a href="tel:+559999999999" class="text-primary hover:underline"
+              >(99) 99999-9999</a
+            >
+          </p>
         </address>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; <span id="ano">2025</span> ONG Criança Feliz</p>
+    <footer class="bg-neutral-800 text-neutral-100 py-6 mt-8">
+      <div class="container text-center">
+        <p>&copy; <span id="ano">2025</span> ONG Criança Feliz</p>
+      </div>
     </footer>
+    <script>
+      // Menu hambúrguer responsivo
+      const hamburger = document.querySelector(".hamburger");
+      const navbarMenu = document.querySelector(".navbar-menu");
+      hamburger.addEventListener("click", function () {
+        navbarMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        // Atualiza aria-expanded
+        hamburger.setAttribute(
+          "aria-expanded",
+          navbarMenu.classList.contains("active")
+        );
+      });
+      // Fecha menu ao clicar em link (mobile)
+      document.querySelectorAll(".navbar-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            navbarMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
