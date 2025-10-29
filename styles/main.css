@@ -1,3 +1,197 @@
+/* Espaçamento superior para a lista de ícones sociais no contato */
+.contato-social-list {
+  margin-top: 20px;
+}
+
+/* Centralizar verticalmente os ícones das redes sociais */
+.contato-social-list img {
+  vertical-align: middle;
+}
+
+#valores-lista .valor-item {
+  justify-content: center;
+}
+
+#valores-lista {
+  text-align: center;
+}
+
+/* Alinhar à esquerda a lista da seção Equipe */
+#sobre-equipe #equipe-lista {
+  text-align: left !important;
+}
+
+/* Centralizar texto dos parágrafos da seção Informações */
+#sobre-informacoes .info-bloco p {
+  text-align: center !important;
+}
+
+.newsletter-form-row-btn button {
+  flex: 1 1 0;
+  width: 100%;
+}
+
+.newsletter-form-row-btn {
+  margin-bottom: 0;
+  gap: 12px;
+}
+
+/* Remover margem inferior do h2 Newsletter */
+
+#card-newsletter h2 {
+  margin-bottom: 0 !important;
+}
+
+/* Cor específica para o h2 Documentos Públicos em transparencia.html */
+h2#documentos {
+  color: var(--primary-300) !important;
+}
+
+/* Espaçamento entre o parágrafo e o form da newsletter */
+#card-newsletter p.text-neutral-700 {
+  margin-bottom: 24px;
+}
+
+/* Formulário da newsletter centralizado e com largura máxima de 40% */
+#card-newsletter form {
+  max-width: 50%;
+  min-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  #card-newsletter form {
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Alinhamento horizontal label + input no formulário da newsletter */
+.newsletter-form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.newsletter-form-row label {
+  min-width: 80px;
+  margin-bottom: 0;
+}
+
+.newsletter-form-row input {
+  flex: 1 1 0;
+  margin-bottom: 0;
+}
+
+/* Correção visual para garantir cores da seção Newsletter */
+#card-newsletter {
+  background-color: var(--secondary-200) !important;
+}
+
+#card-newsletter h2 {
+  color: var(--primary-200) !important;
+}
+
+.card.transp-col {
+  margin: 0 !important;
+}
+
+.mt-28px {
+  margin-top: 28px !important;
+}
+
+.mb-28px {
+  margin-bottom: 28px !important;
+}
+
+.pt-48px {
+  padding-top: 48px !important;
+}
+
+.bg-secondary-300 {
+  background-color: var(--secondary-300) !important;
+}
+
+.text-primary-300 {
+  color: var(--primary-300) !important;
+}
+
+.bg-secondary-400 {
+  background-color: var(--secondary-400) !important;
+}
+
+.text-primary-400 {
+  color: var(--primary-400) !important;
+}
+
+/* Bullets coloridos para Blog & Notícias em transparencia.html */
+.valor-bullet-feira-livro {
+  color: var(--primary-200);
+}
+
+.valor-bullet-gincana {
+  color: var(--primary-300);
+}
+
+.valor-bullet-ciencias {
+  color: var(--primary-100);
+}
+
+/* Utilitário para margin-top: 48px */
+.mt-48px {
+  margin-top: 48px !important;
+}
+
+/* Utilitários para margens específicas em transparência */
+.mb-48px {
+  margin-bottom: 48px !important;
+}
+
+.mt-0px {
+  margin-top: 0 !important;
+}
+
+/* Grid 2 colunas para área de imprensa e documentos em transparencia.html */
+.transp-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.transp-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .transp-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Espaçamento superior para o conteúdo principal, sem sobrepor o header */
+.main-pt-48px {
+  padding-top: 48px !important;
+}
+
+/* Utilitário para margin-top de 20px */
+.mt-20px {
+  margin-top: 20px !important;
+}
+
 /* Forçar negrito no texto do botão de doação */
 .btn.font-bold {
   font-weight: 700 !important;
@@ -154,27 +348,28 @@ main section h2 {
   margin-bottom: 0;
 }
 
-#valores-lista .valor-bullet {
+
+.valor-bullet {
   display: inline-block;
-  margin-right: 0.75em;
+  margin-right: 0.4em;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-#valores-lista .valor-bullet-inclusao {
-  color: var(--primary-200);
+.valor-bullet-inclusao {
+  color: var(--primary-200) !important;
 }
 
-#valores-lista .valor-bullet-transparencia {
-  color: var(--primary-300);
+.valor-bullet-transparencia {
+  color: var(--primary-300) !important;
 }
 
-#valores-lista .valor-bullet-colaboracao {
-  color: var(--primary-400);
+.valor-bullet-colaboracao {
+  color: var(--primary-400) !important;
 }
 
-#valores-lista .valor-bullet-impacto {
-  color: var(--primary-100);
+.valor-bullet-impacto {
+  color: var(--primary-100) !important;
 }
 
 /* Lista de equipe com bullets e padding */
@@ -410,7 +605,7 @@ section[aria-labelledby="doe"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  list-style: disc;
+  list-style: none;
   padding-left: 0;
   margin: 10px auto 0 auto;
   text-align: center;
