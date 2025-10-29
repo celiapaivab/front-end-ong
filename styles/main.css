@@ -1,3 +1,84 @@
+/* Forçar negrito no texto do botão de doação */
+.btn.font-bold {
+  font-weight: 700 !important;
+}
+
+/* Forçar negrito nos labels do formulário de doações */
+.form-label.font-bold,
+label.form-label.font-bold {
+  font-weight: 700 !important;
+}
+
+/* Input sólido para formulário de doações */
+.input-solid {
+  background: var(--neutral-200, #f5f5f5);
+  border: 2px solid var(--primary-100);
+  color: var(--neutral-800);
+  font-weight: 500;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.input-solid:focus {
+  border-color: var(--primary-200);
+  background: var(--neutral-100, #fff);
+}
+
+#card-doacao-online {
+  flex-grow: 1;
+  height: 100%;
+}
+
+#card-doacao-online h2 {
+  margin-bottom: 0 !important;
+}
+
+#card-doacao-online>p.text-neutral-700 {
+  margin-bottom: 10px;
+}
+
+.doacoes-col-dir {
+  margin-right: 24px;
+}
+
+/* Grid para página de doações */
+.doacoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.doacoes-col-esq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 16px;
+}
+
+.doacoes-col-dir {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .doacoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doacoes-col-esq,
+  .doacoes-col-dir {
+    gap: 24px;
+  }
+}
+
 .ul-impacto li {
   font-weight: 700;
 }
