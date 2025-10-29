@@ -1,3 +1,49 @@
+.ul-impacto li {
+  font-weight: 700;
+}
+
+main section h2 {
+  margin-bottom: 15px;
+}
+
+.card>* {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#card-certificados {
+  background-color: var(--secondary-300) !important;
+}
+
+#card-certificados h2 {
+  color: var(--primary-300) !important;
+}
+
+#card-area-voluntario {
+  background-color: var(--secondary-400) !important;
+}
+
+#card-area-voluntario h2 {
+  color: var(--primary-400) !important;
+}
+
+#card-inscricao {
+  background-color: var(--secondary-200) !important;
+}
+
+#card-inscricao h2 {
+  color: var(--primary-200) !important;
+}
+
+#card-oportunidades {
+  background-color: var(--secondary-100) !important;
+}
+
+#card-oportunidades h2 {
+  color: var(--primary-100) !important;
+}
+
 #sobre-titulo {
   margin-bottom: var(--space-4, 24px) !important;
 }
@@ -67,8 +113,9 @@
 /* Card largura máxima e centralizado para index */
 .card-maxcenter {
   width: 100%;
-  max-width: 700px;
-
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* Galeria mista: fotos e vídeo juntos, lado a lado, responsivo */
@@ -276,22 +323,23 @@ section[aria-labelledby="doe"] {
 }
 
 /* Listas de indicadores de impacto dos projetos */
+
 .ul-impacto {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   list-style: disc;
   padding-left: 0;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   text-align: center;
+  gap: 0;
 }
 
 .ul-impacto li {
   display: list-item;
   list-style-position: inside;
-  margin-right: 0.5em;
+  margin: 0;
   text-align: center;
 }
 
