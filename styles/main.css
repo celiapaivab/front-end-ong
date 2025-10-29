@@ -1,3 +1,54 @@
+#cadastro-voluntario legend {
+  color: var(--primary-100) !important;
+}
+
+/* Margem inferior de 20px para o legend do cadastro */
+#cadastro-voluntario legend {
+  margin-bottom: 20px !important;
+}
+
+/* Título da seção de cadastro de voluntário com cor primária 200 */
+#cadastro-voluntario h2 {
+  color: var(--primary-200) !important;
+}
+
+/* Fundo primário para a seção de cadastro de voluntário */
+#cadastro-voluntario {
+  background-color: var(--secondary-200) !important;
+}
+
+/* Wrapper do formulário de cadastro de voluntário */
+#cadastro-voluntario-form-wrap {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Formulário de cadastro: largura total e alinhamento à esquerda */
+#cadastro-voluntario-form {
+  width: 100%;
+  text-align: left;
+}
+
+/* Centraliza botões em formulários */
+.form-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Remove borda do fieldset do formulário de cadastro */
+#cadastro-voluntario form fieldset {
+  border: 0 !important;
+  border-style: none !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
 /* Espaçamento superior para a lista de ícones sociais no contato */
 .contato-social-list {
   margin-top: 20px;
