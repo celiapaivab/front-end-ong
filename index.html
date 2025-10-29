@@ -7,33 +7,69 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar" id="main-navbar">
       <div class="container navbar-container">
-        <a href="index.html" class="navbar-brand">ONG Criança Feliz</a>
-        <p class="text-lg text-neutral-600 hidden-mobile">
+        <a href="index.html" class="navbar-brand" id="navbar-logo"
+          >ONG Criança Feliz</a
+        >
+        <p class="text-lg text-neutral-600 hidden-mobile" id="navbar-desc">
           Projetos educacionais e culturais para crianças em escolas públicas.
         </p>
-        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <button
+          class="hamburger"
+          id="menu-toggle"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
           <span></span>
         </button>
-        <nav class="navbar-menu">
+        <nav class="navbar-menu" id="main-menu">
           <ul>
             <li class="navbar-item">
-              <a href="index.html" class="navbar-link">Institucional</a>
+              <a href="index.html" class="navbar-link" id="nav-institucional"
+                >Institucional</a
+              >
+            </li>
+            <li class="navbar-item dropdown">
+              <a href="projetos.html" class="navbar-link" id="nav-projetos"
+                >Projetos</a
+              >
+              <ul class="dropdown-menu" id="submenu-projetos">
+                <li>
+                  <a href="projetos.html#feira-ciencias" class="dropdown-item"
+                    >Feira de Ciências</a
+                  >
+                </li>
+                <li>
+                  <a href="projetos.html#feira-livro" class="dropdown-item"
+                    >Feira do Livro</a
+                  >
+                </li>
+                <li>
+                  <a href="projetos.html#gincana" class="dropdown-item"
+                    >Gincana</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="navbar-item">
-              <a href="projetos.html" class="navbar-link">Projetos</a>
+              <a
+                href="voluntariado.html"
+                class="navbar-link"
+                id="nav-voluntariado"
+                >Voluntariado</a
+              >
             </li>
             <li class="navbar-item">
-              <a href="voluntariado.html" class="navbar-link">Voluntariado</a>
-            </li>
-            <li class="navbar-item">
-              <a href="doacoes.html" class="navbar-link"
+              <a href="doacoes.html" class="navbar-link" id="nav-doacoes"
                 >Captação de recursos</a
               >
             </li>
             <li class="navbar-item">
-              <a href="transparencia.html" class="navbar-link"
+              <a
+                href="transparencia.html"
+                class="navbar-link"
+                id="nav-transparencia"
                 >Comunicação & Transparência</a
               >
             </li>
@@ -41,15 +77,35 @@
         </nav>
       </div>
     </header>
+    <section id="logo-section" class="w-full flex justify-center my-6">
+      <img
+        src="assets/logo-quadrada.jpg"
+        alt="Logo ONG Criança Feliz"
+        class="img-responsive"
+        style="
+          max-width: 260px;
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-md);
+        "
+      />
+    </section>
 
-    <main class="container py-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main class="container py-8" id="main-content">
+      <div
+        id="home-cards"
+        style="display: flex; flex-direction: row; gap: 32px"
+      >
         <!-- Seção Missão -->
         <section
           aria-labelledby="missao"
-          class="card bg-secondary-100 transform hover:scale-105 transition-transform"
+          class="card bg-secondary-100"
+          id="card-missao"
+          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
-          <h2 id="missao" class="text-2xl font-bold text-primary-200 mb-4">
+          <h2
+            id="missao"
+            class="text-2xl font-bold text-primary-200 mb-4 text-center"
+          >
             Missão
           </h2>
           <p class="text-neutral-700">
@@ -62,9 +118,14 @@
         <!-- Seção Visão -->
         <section
           aria-labelledby="visao"
-          class="card bg-secondary-200 transform hover:scale-105 transition-transform"
+          class="card bg-secondary-200"
+          id="card-visao"
+          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
-          <h2 id="visao" class="text-2xl font-bold text-primary-300 mb-4">
+          <h2
+            id="visao"
+            class="text-2xl font-bold text-primary-300 mb-4 text-center"
+          >
             Visão
           </h2>
           <p class="text-neutral-700">
@@ -76,29 +137,34 @@
         <!-- Seção Valores -->
         <section
           aria-labelledby="valores"
-          class="card bg-secondary-300 transform hover:scale-105 transition-transform"
+          class="card bg-secondary-300"
+          id="card-valores"
+          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
-          <h2 id="valores" class="text-2xl font-bold text-primary-400 mb-4">
+          <h2
+            id="valores"
+            class="text-2xl font-bold text-primary-400 mb-4 text-center"
+          >
             Valores
           </h2>
-          <ul class="grid grid-cols-2 gap-3">
+          <ul class="flex flex-col" id="valores-lista">
             <li
-              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-inclusao"
             >
               <span class="text-primary-200 mr-2">•</span>Inclusão
             </li>
             <li
-              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-transparencia"
             >
               <span class="text-primary-300 mr-2">•</span>Transparência
             </li>
             <li
-              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-colaboracao"
             >
               <span class="text-primary-400 mr-2">•</span>Colaboração
             </li>
             <li
-              class="flex items-center text-neutral-700 bg-white p-2 rounded-md"
+              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-impacto"
             >
               <span class="text-primary-100 mr-2">•</span>Impacto social
             </li>
@@ -107,11 +173,11 @@
       </div>
 
       <!-- Seção Sobre -->
-      <section aria-labelledby="sobre" class="mt-8">
-        <h2 id="sobre" class="text-3xl font-bold text-primary mb-6">
+      <section aria-labelledby="sobre" class="mt-8" id="sobre">
+        <h2 id="sobre-titulo" class="text-3xl font-bold text-primary mb-6">
           Sobre a ONG
         </h2>
-        <div class="card">
+        <div class="card" id="sobre-card">
           <p class="text-lg text-neutral-700 mb-6">
             Atuamos em parceria com escolas públicas, secretarias e voluntários
             para organizar feiras e atividades culturais. Nosso propósito é
@@ -119,10 +185,11 @@
             que estimulem sua curiosidade, imaginação e autonomia.
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid-12 gap-md" id="sobre-grid">
             <article
               aria-labelledby="historico"
-              class="bg-secondary-100 p-4 rounded-lg"
+              class="bg-secondary-100 p-4 rounded-lg col-6"
+              id="sobre-historico"
             >
               <h3
                 id="historico"
@@ -138,10 +205,10 @@
                 leitura, arte e ciências.
               </p>
             </article>
-
             <article
               aria-labelledby="equipe"
-              class="bg-secondary-100 p-4 rounded-lg"
+              class="bg-secondary-100 p-4 rounded-lg col-6"
+              id="sobre-equipe"
             >
               <h3 id="equipe" class="text-xl font-semibold text-primary mb-3">
                 Equipe e Estrutura Organizacional
@@ -151,79 +218,103 @@
                 áreas, unidos pela missão de oferecer educação de qualidade e
                 vivências culturais significativas.
               </p>
-
-              <ul class="space-y-2">
-                <li class="flex items-center text-neutral-700">
-                  <strong class="text-primary">Maria Silva</strong>
-                  <span class="mx-2">—</span>
-                  Diretora Executiva e Financeira
+              <ul id="equipe-lista" style="list-style: disc; padding-left: 2em">
+                <li class="text-neutral-700">
+                  <span style="font-weight: 600">Diretora Executiva e Financeira:</span><br />
+                  <span style="margin-left: 1em"
+                    >Maria Silva</span
+                  >
                 </li>
-                <li class="flex items-center text-neutral-700">
-                  <strong class="text-primary">Ana Silva</strong>
-                  <span class="mx-2">—</span>
-                  Coordenadora de Projetos
+                <li class="text-neutral-700">
+                  <span style="font-weight: 600">Coordenadora de Projetos:</span><br />
+                  <span style="margin-left: 1em">Ana Silva</span>
                 </li>
-                <li class="flex items-center text-neutral-700">
-                  <strong class="text-primary">Equipe técnica:</strong>
-                  <span class="mx-2">—</span>
-                  Professores, psicólogos e monitores voluntários.
+                <li class="text-neutral-700">
+                  <span style="font-weight: 600">Equipe técnica:</span><br />
+                  <span style="margin-left: 1em"
+                    >Professores, psicólogos e monitores voluntários.</span
+                  >
                 </li>
               </ul>
             </article>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-          <p class="text-lg">
-            Para conhecer nossos projetos, visite a página
-            <a
-              href="projetos.html"
-              class="text-primary hover:underline font-medium"
-              >Projetos</a
-            >.
-          </p>
-          <p class="text-lg">
-            Acreditamos que a confiança é construída com clareza. Por isso,
-            todos os nossos relatórios financeiros e de impacto estão
-            disponíveis publicamente, visite a página
-            <a
-              href="transparencia.html"
-              class="text-primary hover:underline font-medium"
-              >Comunicação & Transparência</a
-            >.
-          </p>
-        </div>
       </section>
 
-      <!-- Seção Contato -->
-      <section aria-labelledby="contato" class="mt-8 card bg-secondary-100">
-        <h2 id="contato" class="text-2xl font-bold text-primary mb-4">
-          Contato
-        </h2>
-        <address class="text-neutral-700 not-italic">
-          <p class="mb-2">
-            Rua Brasil, 123 — Bairro Cidade Nova — Cidade Feliz
-          </p>
-          <p class="mb-2">
-            E-mail:
-            <a
-              href="mailto:contato@criancafeliz.org"
-              class="text-primary hover:underline"
-              >contato@criancafeliz.org</a
+      <!-- Seção Infos-->
+      <section aria-labelledby="contato" class="mt-8" id="contato">
+        <div class="grid-12 gap-md" id="contato-card">
+          <article class="card bg-secondary-100 col-6 card-hover">
+            <h2 class="text-2xl font-bold text-primary mb-4 text-center">
+              Informações
+            </h2>
+            <div class="info-bloco" id="info-links">
+              <p class="text-lg">
+                Para conhecer nossos projetos, visite a página
+                <a
+                  href="projetos.html"
+                  class="text-primary hover:underline font-medium badge badge-projetos"
+                  >Projetos</a
+                >.
+              </p>
+              <p class="text-lg">
+                Acreditamos que a confiança é construída com clareza. Por isso,
+                todos os nossos relatórios financeiros e de impacto estão
+                disponíveis publicamente, visite a página
+                <a
+                  href="transparencia.html"
+                  class="text-primary hover:underline font-medium badge badge-transparencia"
+                  >Comunicação & Transparência</a
+                >.
+              </p>
+            </div>
+          </article>
+          <article
+            class="card bg-secondary-100 col-6 card-hover"
+            id="info-contatos"
+          >
+            <h2
+              id="contato-titulo"
+              class="text-2xl font-bold text-primary mb-4 text-center"
             >
-          </p>
-          <p>
-            Telefone:
-            <a href="tel:+559999999999" class="text-primary hover:underline"
-              >(99) 99999-9999</a
-            >
-          </p>
-        </address>
+              Contato
+            </h2>
+            <address class="text-neutral-700 not-italic" id="contato-info">
+              <p class="mb-2 text-center">
+                <span class="tag tag-endereco"
+                  >Rua Brasil, 123 — Bairro Cidade Nova — Cidade Feliz</span
+                >
+              </p>
+              <p class="mb-2 text-center">
+                E-mail:
+                <a
+                  href="mailto:contato@criancafeliz.org"
+                  class="text-primary hover:underline tag tag-email"
+                  >contato@criancafeliz.org</a
+                >
+              </p>
+              <p class="text-center">
+                Telefone:
+                <a
+                  href="tel:+559999999999"
+                  class="text-primary hover:underline tag tag-telefone"
+                  >(99) 99999-9999</a
+                >
+              </p>
+            </address>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer class="bg-neutral-800 text-neutral-100 py-6 mt-8">
-      <div class="container text-center">
-        <p>&copy; <span id="ano">2025</span> ONG Criança Feliz</p>
+    <footer class="bg-neutral-800 text-neutral-100 py-6 mt-8" id="footer">
+      <div
+        class="container flex flex-col items-center justify-center text-center"
+        id="footer-container"
+      >
+        <p id="footer-copy">
+          &copy; <span id="ano">2025</span> ONG Criança Feliz
+        </p>
       </div>
     </footer>
     <script>
