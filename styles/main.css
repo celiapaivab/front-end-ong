@@ -1,3 +1,364 @@
+#sobre-titulo {
+  margin-bottom: var(--space-4, 24px) !important;
+}
+
+/* Padronização dos itens da lista de valores */
+#valores-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#valores-lista .valor-item {
+  display: flex;
+  align-items: center;
+  color: var(--neutral-700);
+  font-size: var(--text-base);
+  /* igual aos parágrafos */
+  font-weight: 400;
+  /* igual aos parágrafos */
+  border-radius: var(--radius-md);
+  margin-bottom: 0;
+  margin-top: 0;
+  background: none;
+}
+
+#valores-lista .valor-item:last-child {
+  margin-bottom: 0;
+}
+
+#valores-lista .valor-bullet {
+  display: inline-block;
+  margin-right: 0.75em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#valores-lista .valor-bullet-inclusao {
+  color: var(--primary-200);
+}
+
+#valores-lista .valor-bullet-transparencia {
+  color: var(--primary-300);
+}
+
+#valores-lista .valor-bullet-colaboracao {
+  color: var(--primary-400);
+}
+
+#valores-lista .valor-bullet-impacto {
+  color: var(--primary-100);
+}
+
+/* Lista de equipe com bullets e padding */
+.ul-equipe-lista {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.equipe-bold {
+  font-weight: 600;
+}
+
+.equipe-indent {
+  margin-left: 1em;
+}
+
+/* Card largura máxima e centralizado para index */
+.card-maxcenter {
+  width: 100%;
+  max-width: 700px;
+
+}
+
+/* Galeria mista: fotos e vídeo juntos, lado a lado, responsivo */
+.galeria-mista {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.galeria-mista img,
+.galeria-mista .galeria-video {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 32%;
+}
+
+.galeria-mista .galeria-video {
+  max-width: 36%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .galeria-mista {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .galeria-mista img,
+  .galeria-mista .galeria-video {
+    max-width: 100%;
+  }
+}
+
+/* Layout lado a lado para fotos e vídeo nos cards de projetos */
+.midia-flex {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.midia-fotos,
+.midia-video {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.midia-fotos {
+  max-width: 50%;
+}
+
+.midia-video {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.midia-video video {
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (max-width: 900px) {
+  .midia-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .midia-fotos,
+  .midia-video {
+    max-width: 100%;
+  }
+
+  .midia-video video {
+    max-width: 100%;
+  }
+}
+
+/* Card de projetos ocupando toda a largura, com margem lateral */
+.card-fullwidth {
+  width: auto;
+  max-width: 100vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 0;
+}
+
+/* Não mover lateralmente no hover para fullwidth */
+.card-fullwidth.card-hover:hover {
+  transform: scale(1.02);
+}
+
+/* Card especial para Gincana do Dia das Crianças */
+.card-gincana {
+  background: var(--secondary-400) !important;
+}
+
+.card-gincana .h2-gincana {
+  color: var(--primary-400) !important;
+}
+
+/* Card especial para Feira do Livro */
+.card-feira-livro {
+  background: var(--secondary-300) !important;
+}
+
+.card-feira-livro .h2-feira-livro {
+  color: var(--primary-300) !important;
+}
+
+/* Card especial para Feira de Ciências */
+.card-feira-ciencias {
+  background: var(--secondary-200) !important;
+}
+
+.card-feira-ciencias .h2-feira-ciencias {
+  color: var(--primary-200) !important;
+}
+
+section[aria-labelledby="indice-projetos"] {
+  margin: 0 0 40px 0 !important;
+}
+
+#projetos-cards {
+  padding-top: 32px;
+}
+
+/* Reduz o espaçamento inferior da seção de índice de projetos para evitar sobreposição */
+
+/* Margem superior para a seção de cards de projetos */
+#projetos-cards {
+  margin-top: 48px;
+}
+
+/* Remove margem superior dos cards de projetos dentro do flex */
+.projetos-cards-flex>.card-projeto {
+  margin-top: 0 !important;
+}
+
+/* Espaçamento horizontal reduzido entre os cards de projetos */
+.projetos-cards-flex {
+  gap: 1rem;
+  /* Reduzido para 16px, ajuste conforme necessário */
+}
+
+/* Espaçamento vertical entre itens dos cards de projetos */
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  /* 20px, ajustável conforme necessário */
+}
+
+/* Card para chamadas de voluntariado e doações */
+.card-chamada {
+  margin: 32px 0 0 0;
+  width: 100vw;
+  max-width: 100vw;
+  border-radius: 0;
+  padding: 32px 0;
+  box-shadow: var(--shadow-md);
+  background: var(--neutral-50, #fff);
+  text-align: center;
+}
+
+section[aria-labelledby="participe"],
+section[aria-labelledby="doe"] {
+  background: var(--secondary-100) !important;
+}
+
+.card-chamada p,
+.card-chamada h2 {
+  text-align: center;
+}
+
+/* Link destacado nas chamadas */
+.chamada-link {
+  color: var(--primary-200);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.chamada-link:hover {
+  color: var(--primary-100);
+}
+
+/* Links destacados badge-projetos e badge-transparencia */
+.badge-projetos,
+.badge-transparencia {
+  color: var(--primary-200) !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.badge-projetos:hover,
+.badge-transparencia:hover {
+  color: var(--primary-100) !important;
+}
+
+/* Listas de indicadores de impacto dos projetos */
+.ul-impacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  align-items: center;
+  justify-content: center;
+  list-style: disc;
+  padding-left: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ul-impacto li {
+  display: list-item;
+  list-style-position: inside;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+.indicadores-mt {
+  margin-top: 1.5rem;
+  font-weight: 700 !important;
+  text-align: center;
+}
+
+/* Vídeos dos cards de projetos */
+.card-video {
+  max-width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Imagens da galeria de fotos dos projetos */
+.galeria-img {
+  border-radius: 8px;
+}
+
+/* Flex container para galeria de fotos dos projetos */
+.galeria-flex {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Links do índice de projetos */
+.indice-projeto-link {
+  flex: 1 1 200px;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Flex container do índice de projetos */
+.indice-projetos-flex {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+/* Estilo da imagem do logo na seção principal */
+.logo-img {
+  max-width: 260px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Espaçamento do logo-section */
+.logo-section-spacing {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+/* Flex container for projetos cards */
+.projetos-cards-flex {
+  gap: 32px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 #equipe-lista span[style*="font-weight: 600"] {
   color: var(--primary-100) !important;
 }
@@ -31,11 +392,25 @@
 /* Card Valores com cor de fundo específica */
 #card-valores {
   background-color: var(--secondary-400) !important;
+  margin-top: var(--space-6, 48px) !important;
+  margin-bottom: var(--space-6, 48px) !important;
 }
+
 
 /* Título Valores com cor específica */
 #valores {
   color: var(--primary-400) !important;
+}
+
+/* Compensação de header fixo para âncoras dos projetos */
+.h2-projeto-ancora {
+  scroll-margin-top: 120px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#indice-projetos.h2-projeto-ancora {
+  scroll-margin-top: 90px;
 }
 
 /* Título Missão com cor específica */
@@ -507,6 +882,12 @@ abbr[title] {
 
 .flex-col {
   flex-direction: column;
+  gap: 0;
+}
+
+/* Remove padding dos itens da lista de valores */
+#valores-lista>li {
+  padding: 0 !important;
 }
 
 .items-center {

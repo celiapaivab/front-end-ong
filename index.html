@@ -77,30 +77,25 @@
         </nav>
       </div>
     </header>
-    <section id="logo-section" class="w-full flex justify-center my-6">
-      <img
-        src="assets/logo-quadrada.jpg"
-        alt="Logo ONG Criança Feliz"
-        class="img-responsive"
-        style="
-          max-width: 260px;
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-        "
-      />
-    </section>
 
     <main class="container py-8" id="main-content">
-      <div
-        id="home-cards"
-        style="display: flex; flex-direction: row; gap: 32px"
-      >
+      <section id="logo-section" class="w-full flex justify-center my-6">
+        <img
+          src="assets/logo-quadrada.jpg"
+          alt="Logo ONG Criança Feliz"
+          class="img-responsive logo-img"
+        />
+      </section>
+      <!-- Seção Missão -->
+      <h2 id="indice-projetos" class="text-3xl font-bold text-primary mb-6">
+        Quem Somos
+      </h2>
+      <div id="home-cards">
         <!-- Seção Missão -->
         <section
           aria-labelledby="missao"
-          class="card bg-secondary-100"
+          class="card bg-secondary-100 card-maxcenter"
           id="card-missao"
-          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
           <h2
             id="missao"
@@ -118,9 +113,8 @@
         <!-- Seção Visão -->
         <section
           aria-labelledby="visao"
-          class="card bg-secondary-200"
+          class="card bg-secondary-200 card-maxcenter"
           id="card-visao"
-          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
           <h2
             id="visao"
@@ -137,9 +131,8 @@
         <!-- Seção Valores -->
         <section
           aria-labelledby="valores"
-          class="card bg-secondary-300"
+          class="card bg-secondary-300 card-maxcenter"
           id="card-valores"
-          style="width: 100%; max-width: 700px; margin: 0 auto"
         >
           <h2
             id="valores"
@@ -148,25 +141,20 @@
             Valores
           </h2>
           <ul class="flex flex-col" id="valores-lista">
-            <li
-              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-inclusao"
-            >
-              <span class="text-primary-200 mr-2">•</span>Inclusão
+            <li class="valor-item">
+              <span class="valor-bullet valor-bullet-inclusao">•</span>Inclusão
             </li>
-            <li
-              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-transparencia"
-            >
-              <span class="text-primary-300 mr-2">•</span>Transparência
+            <li class="valor-item">
+              <span class="valor-bullet valor-bullet-transparencia">•</span
+              >Transparência
             </li>
-            <li
-              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-colaboracao"
-            >
-              <span class="text-primary-400 mr-2">•</span>Colaboração
+            <li class="valor-item">
+              <span class="valor-bullet valor-bullet-colaboracao">•</span
+              >Colaboração
             </li>
-            <li
-              class="flex items-center text-neutral-700 p-2 rounded-md badge badge-impacto"
-            >
-              <span class="text-primary-100 mr-2">•</span>Impacto social
+            <li class="valor-item">
+              <span class="valor-bullet valor-bullet-impacto">•</span>Impacto
+              social
             </li>
           </ul>
         </section>
@@ -218,20 +206,21 @@
                 áreas, unidos pela missão de oferecer educação de qualidade e
                 vivências culturais significativas.
               </p>
-              <ul id="equipe-lista" style="list-style: disc; padding-left: 2em">
+              <ul id="equipe-lista" class="ul-equipe-lista">
                 <li class="text-neutral-700">
-                  <span style="font-weight: 600">Diretora Executiva e Financeira:</span><br />
-                  <span style="margin-left: 1em"
-                    >Maria Silva</span
-                  >
+                  <span class="equipe-bold"
+                    >Diretora Executiva e Financeira:</span
+                  ><br />
+                  <span class="equipe-indent">Maria Silva</span>
                 </li>
                 <li class="text-neutral-700">
-                  <span style="font-weight: 600">Coordenadora de Projetos:</span><br />
-                  <span style="margin-left: 1em">Ana Silva</span>
+                  <span class="equipe-bold">Coordenadora de Projetos:</span
+                  ><br />
+                  <span class="equipe-indent">Ana Silva</span>
                 </li>
                 <li class="text-neutral-700">
-                  <span style="font-weight: 600">Equipe técnica:</span><br />
-                  <span style="margin-left: 1em"
+                  <span class="equipe-bold">Equipe técnica:</span><br />
+                  <span class="equipe-indent"
                     >Professores, psicólogos e monitores voluntários.</span
                   >
                 </li>
