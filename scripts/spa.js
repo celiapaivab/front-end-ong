@@ -7,6 +7,48 @@ async function loadPage(url, hash) {
     renderTemplate(html, "#app", true);
     // Re-inicializa scripts globais
     if (typeof setupHamburgerMenu === "function") setupHamburgerMenu();
+    // Inicializa validação de formulários, se existir
+    document.querySelectorAll("form").forEach((form) => {
+      if (typeof initFormValidation === "function") {
+        initFormValidation(form);
+      }
+      // Intercepta submit para mostrar mensagem de sucesso sem redirecionar
+      form.addEventListener("submit", function (e) {
+        // Se já existe mensagem de sucesso, não faz nada
+        if (form.querySelector(".form-success-message")) return;
+        let isFormValid = true;
+        form.querySelectorAll("input, select").forEach((input) => {
+          if (typeof validateField === "function" && !validateField(input))
+            isFormValid = false;
+        });
+        if (isFormValid) {
+          e.preventDefault();
+          // Remove mensagens de erro
+          form.querySelectorAll(".error-message").forEach((el) => el.remove());
+          // Exibe mensagem de sucesso
+          const msg = document.createElement("div");
+          msg.className = "form-success-message";
+          msg.innerText = "Formulário enviado com sucesso!";
+          msg.style.margin = "16px 0";
+          msg.style.color = "#1a7f37";
+          form.appendChild(msg);
+          // Remove mensagem de sucesso ao editar qualquer campo
+          form.querySelectorAll("input, select, textarea").forEach((input) => {
+            input.addEventListener("input", () => {
+              const successMsg = form.querySelector(".form-success-message");
+              if (successMsg) successMsg.remove();
+            });
+            input.addEventListener("blur", () => {
+              const successMsg = form.querySelector(".form-success-message");
+              if (successMsg) successMsg.remove();
+            });
+          });
+          // Opcional: resetar o formulário
+          form.reset();
+        }
+        // Se não for válido, o initFormValidation já previne o submit
+      });
+    });
     // Scroll para hash, se existir
     if (hash) {
       setTimeout(() => {
