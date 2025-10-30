@@ -1,62 +1,54 @@
-// scripts/main.js
-// Organização: Cada funcionalidade em uma seção comentada
+// Funções globais
 
-// =====================
-// 1. Sistema de Templates JS
-// =====================
-
-/**
- * Renderiza um template HTML em um elemento alvo.
- * @param {string} template - HTML string do template.
- * @param {Element|string} target - Elemento ou seletor CSS do alvo.
- * @param {boolean} [replace=false] - Se true, substitui o conteúdo. Se false, adiciona.
- */
-function renderTemplate(template, target, replace = false) {
+// Renderiza HTML em um elemento alvo
+function renderTemplate(html, target, replace = true) {
   const el =
     typeof target === "string" ? document.querySelector(target) : target;
   if (!el) return;
-  if (replace) {
-    el.innerHTML = template;
-  } else {
-    el.insertAdjacentHTML("beforeend", template);
-  }
+  if (replace) el.innerHTML = html;
+  else el.insertAdjacentHTML("beforeend", html);
 }
 
-// =====================
-// 2. Menu Hambúrguer Responsivo
-// =====================
-
+// Menu hambúrguer responsivo
 function setupHamburgerMenu() {
   const hamburger = document.querySelector(".hamburger");
   const navbarMenu = document.querySelector(".navbar-menu");
   if (!hamburger || !navbarMenu) return;
 
-  hamburger.addEventListener("click", function () {
+  // Remove listeners anteriores
+  hamburger.replaceWith(hamburger.cloneNode(true));
+  const newHamburger = document.querySelector(".hamburger");
+
+  newHamburger.addEventListener("click", () => {
     navbarMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-    hamburger.setAttribute(
+    newHamburger.classList.toggle("active");
+    newHamburger.setAttribute(
       "aria-expanded",
       navbarMenu.classList.contains("active")
     );
   });
 
-  // Fecha menu ao clicar em link (mobile)
-  document.querySelectorAll(".navbar-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth < 768) {
-        navbarMenu.classList.remove("active");
-        hamburger.classList.remove("active");
-        hamburger.setAttribute("aria-expanded", "false");
-      }
-    });
+  // Fecha menu ao clicar em qualquer link do menu, se estiver aberto
+  function closeHamburgerMenu() {
+    if (navbarMenu.classList.contains("active")) {
+      navbarMenu.classList.remove("active");
+      newHamburger.classList.remove("active");
+      newHamburger.setAttribute("aria-expanded", "false");
+    }
+  }
+  document.querySelectorAll(".navbar-link, .dropdown-item").forEach((link) => {
+    link.addEventListener("click", closeHamburgerMenu);
+  });
+
+  // Fecha o menu se a tela for redimensionada para maior que 768px
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      closeHamburgerMenu();
+    }
   });
 }
 
-// =====================
-// 3. Inicialização Global
-// =====================
-
-document.addEventListener("DOMContentLoaded", function () {
+// Inicialização global
+document.addEventListener("DOMContentLoaded", () => {
   setupHamburgerMenu();
-  // Outras inicializações podem ser adicionadas aqui
 });
