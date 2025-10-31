@@ -17,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/celiapaivab/front-end-ong/issues"
   },
-  "homepage": "https://github.com/celiapaivab/front-end-ong#readme"
+  "homepage": "https://github.com/celiapaivab/front-end-ong#readme",
+  "devDependencies": {}
 }
