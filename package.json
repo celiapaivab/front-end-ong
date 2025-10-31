@@ -18,7 +18,5 @@
     "url": "https://github.com/celiapaivab/front-end-ong/issues"
   },
   "homepage": "https://github.com/celiapaivab/front-end-ong#readme",
-  "devDependencies": {
-    "purgecss": "^7.0.2"
-  }
+  "devDependencies": {}
 }
